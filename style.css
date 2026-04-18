@@ -1,0 +1,64 @@
+/* 1.  */
+.hw-background {
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 2.  */
+.profile-card {
+  
+}
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+}
+
+.profile-name {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.profile-bio {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* 3. */
+.follow-btn {
+  
+
+}
+
+.follow-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+
+:root {
+  --темний:  #1a1a2e;  /* шапка і підвал          */
+  --акцент:  #e94560;  /* кнопки, лінії, посилання */
+  --фон:     #f7f4ef;  /* фон сторінки             */
+  --картка:  #ffffff;  /* фон карток               */
+  --текст:   #2d2d2d;  /* основний текст           */
+  --сірий:   #888888;  /* другорядний текст        */
+}
+
+/* ── ШРИФТИ ──────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Manrope:wght@400;600&display=swap');
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--фон);
+  color: var(--текст);
+  margin: 0;
+  line-height: 1.65;
+}
