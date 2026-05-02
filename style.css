@@ -1,64 +1,121 @@
-/* 1.  */
-.hw-background {
-}
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* 2.  */
-.profile-card {
-  
-}
-.profile-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.5);
-  margin-bottom: 15px;
-}
-
-.profile-name {
-  margin: 0 0 10px 0;
-  font-size: 24px;
-}
-
-.profile-bio {
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 25px;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-/* 3. */
-.follow-btn {
-  
-
-}
-
-.follow-btn:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-
-:root {
-  --темний:  #1a1a2e;  /* шапка і підвал          */
-  --акцент:  #e94560;  /* кнопки, лінії, посилання */
-  --фон:     #f7f4ef;  /* фон сторінки             */
-  --картка:  #ffffff;  /* фон карток               */
-  --текст:   #2d2d2d;  /* основний текст           */
-  --сірий:   #888888;  /* другорядний текст        */
-}
-
-/* ── ШРИФТИ ──────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&family=Manrope:wght@400;600&display=swap');
-
 body {
-  font-family: 'Manrope', sans-serif;
-  background: var(--фон);
-  color: var(--текст);
-  margin: 0;
-  line-height: 1.65;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: #00ffcc;
+}
+
+header {
+    background: #111;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #00ffcc;
+}
+
+nav a {
+    color: #00ffcc;
+    margin: 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: red;
+}
+
+section {
+    padding: 20px;
+}
+
+.card {
+    background: #1a1a1a;
+    border: 1px solid #00ffcc;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+h1, h2, h3 {
+    color: #00ffcc;
+}
+
+a {
+    color: red;
+}
+
+.games {
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    width: 220px;
+    vertical-align: top;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    filter: brightness(70%);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px red;
+    border-color: red;
+}
+
+.card:hover img {
+    filter: brightness(100%);
+}
+
+/* КНОПКА ГРИ */
+.game-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    background: #00ffcc;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.game-btn:hover {
+    background: red;
+    color: white;
+    box-shadow: 0 0 20px red;
+}
+
+/* ТРОХИ FNAF-ЕФЕКТІВ 😈 */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+}
+
+/* ЛЕГКЕ МИГОТІННЯ */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+
+header, h1, h2 {
+    animation: flicker 2s infinite;
 }
